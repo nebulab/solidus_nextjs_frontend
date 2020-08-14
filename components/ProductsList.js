@@ -18,7 +18,7 @@ export const GET_PRODUCTS_QUERY = gql`
   }
 `
 
-export default function ProductsList() {
+export default function ProductsList () {
   const { loading, error, data } = useQuery(GET_PRODUCTS_QUERY)
 
   if (error) {

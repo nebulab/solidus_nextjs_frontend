@@ -9,7 +9,7 @@ const theme = {
   }
 }
 
-export default function App({ Component, pageProps }) {
+export default function App ({ Component, pageProps }) {
   const apolloClient = useApollo(pageProps.initialApolloState)
 
   return (
