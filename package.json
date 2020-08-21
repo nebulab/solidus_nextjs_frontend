@@ -1,6 +1,10 @@
 {
   "name": "solidus_nextjs_frontend",
   "version": "0.1.0",
+  "standard": {
+    "env": ["jest"],
+    "globals": ["render"]
+  },
   "scripts": {
     "dev": "next",
     "build": "next build",
