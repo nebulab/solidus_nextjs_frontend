@@ -18,7 +18,7 @@ export const GET_PRODUCTS_QUERY = gql`
   }
 `
 
-export default function ProductsList () {
+const ProductsList = () => {
   const { loading, error, data } = useQuery(GET_PRODUCTS_QUERY)
 
   if (error) {
@@ -34,10 +34,10 @@ export default function ProductsList () {
   return (
     <ul>
       {products.nodes.map((product) => (
-        <li key={product.id}>
-          {product.name}
-        </li>
+        <li key={product.id}>{product.name}</li>
       ))}
     </ul>
   )
 }
+
+export default ProductsList
