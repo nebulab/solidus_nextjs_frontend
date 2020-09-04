@@ -1,6 +1,6 @@
-import { GET_PRODUCTS_QUERY } from '../ProductsList'
+import { GET_PRODUCTS_QUERY } from '../queries'
 
-export const getProducts = [
+export const products = [
   {
     request: {
       query: GET_PRODUCTS_QUERY

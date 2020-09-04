@@ -1,22 +1,6 @@
-import { gql, useQuery } from '@apollo/client'
+import { useQuery } from '@apollo/client'
 
-export const GET_PRODUCTS_QUERY = gql`
-  query GetProducts {
-    products {
-      nodes {
-        id
-        name
-        masterVariant {
-          images {
-            nodes {
-              largeUrl
-            }
-          }
-        }
-      }
-    }
-  }
-`
+import { GET_PRODUCTS_QUERY } from './queries'
 
 const ProductsList = () => {
   const { loading, error, data } = useQuery(GET_PRODUCTS_QUERY)
