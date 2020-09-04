@@ -10,3 +10,8 @@ const Template = (args) => withTheme(<Button {...args} />)
 
 export const Primary = Template.bind({})
 Primary.args = {}
+
+export const Secondary = Template.bind({})
+Secondary.args = {
+  type: 'secondary'
+}
