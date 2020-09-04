@@ -1,13 +1,6 @@
 import { ApolloProvider } from '@apollo/client'
 import { ThemeProvider } from 'styled-components'
-
-import { useApollo } from '../lib/apolloClient'
-
-const theme = {
-  colors: {
-    accent: '#0070f3'
-  }
-}
+import { theme } from '../lib/theme'
 
 export default function App ({ Component, pageProps }) {
   const apolloClient = useApollo(pageProps.initialApolloState)
