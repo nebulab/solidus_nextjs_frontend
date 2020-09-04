@@ -2,8 +2,12 @@
   "name": "solidus_nextjs_frontend",
   "version": "0.1.0",
   "standard": {
-    "env": ["jest"],
-    "globals": ["render"]
+    "env": [
+      "jest"
+    ],
+    "globals": [
+      "render"
+    ]
   },
   "scripts": {
     "dev": "next",
@@ -38,6 +42,7 @@
     "babel-loader": "^8.1.0",
     "babel-plugin-styled-components": "^1.10.7",
     "cypress": "^5.0.0",
+    "cypress-dotenv": "^1.2.2",
     "jest": "^26.4.1",
     "react-is": "^16.13.1",
     "standard": "^14.3.4"
