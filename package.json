@@ -12,7 +12,9 @@
     "lint": "standard",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "test:unit": "jest"
+    "test:unit": "jest",
+    "test:feature": "cypress open",
+    "test:feature:ci": "cypress run"
   },
   "dependencies": {
     "@apollo/client": "^3.0.2",
@@ -35,6 +37,7 @@
     "babel-jest": "^26.3.0",
     "babel-loader": "^8.1.0",
     "babel-plugin-styled-components": "^1.10.7",
+    "cypress": "^5.0.0",
     "jest": "^26.4.1",
     "react-is": "^16.13.1",
     "standard": "^14.3.4"
