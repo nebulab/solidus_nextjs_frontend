@@ -6,7 +6,9 @@
       "jest"
     ],
     "globals": [
-      "render"
+      "render",
+      "cy",
+      "Cypress"
     ]
   },
   "scripts": {
