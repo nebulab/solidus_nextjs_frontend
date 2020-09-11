@@ -1,0 +1,42 @@
+{
+  "GET_PRODUCTS_QUERY": {
+    "data": {
+      "products": {
+        "nodes": [
+          {
+            "id": "U3ByZWU6OlByb2R1Y3QtMQ==",
+            "name": "Solidus T-Shirt",
+            "masterVariant": {
+               "images": {
+                  "nodes": [
+                     {
+                        "largeUrl": ""
+                     },
+                     {
+                        "largeUrl": ""
+                     }
+                  ]
+               }
+            }
+          },
+          {
+            "id": "U3ByZWU6OlByb2R1Y3QtMg==",
+            "name": "Solidus Long Sleeve",
+            "masterVariant": {
+               "images": {
+                  "nodes": [
+                     {
+                        "largeUrl": ""
+                     },
+                     {
+                        "largeUrl": ""
+                     }
+                  ]
+               }
+            }
+         }
+        ]
+      }
+    }
+  }
+}
