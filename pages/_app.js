@@ -1,6 +1,8 @@
 import { ApolloProvider } from '@apollo/client'
 import { ThemeProvider } from 'styled-components'
 
+import 'normalize.css'
+
 import { useApollo } from '../lib/apolloClient'
 import { theme } from '../lib/theme'
 
