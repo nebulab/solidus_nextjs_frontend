@@ -13,9 +13,7 @@ const responseStub = (result) => Promise.resolve({
 Cypress.Commands.add('stubRequest', (fixture, operationName) => {
   cy.fixture(fixture).then((data) => {
     cy.on('window:before:load', (win) => {
-      const fetchGraphQl = () => {
-        return responseStub(data[operationName])
-      }
+      const fetchGraphQl = () => responseStub(data[operationName])
 
       cy.stub(win, 'fetch')
         .withArgs(Cypress.env('NEXT_PUBLIC_GRAPHQL_URI'))
