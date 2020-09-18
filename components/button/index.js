@@ -19,13 +19,14 @@ const StyledButton = styled.button`
   `}
 `
 
-const Button = ({ type }) => <StyledButton type={type}>ciao</StyledButton>
+const Button = ({ type, children }) => <StyledButton type={type}>{children}</StyledButton>
 
 Button.defaultProps = {
   type: 'primary'
 }
 
 Button.propsTypes = {
+  children: PropTypes.shape({}),
   type: PropTypes.string
 }
 

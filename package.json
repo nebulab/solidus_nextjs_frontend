@@ -1,13 +1,27 @@
 {
   "name": "solidus_nextjs_frontend",
   "version": "0.1.0",
+  "standard": {
+    "env": [
+      "jest"
+    ],
+    "globals": [
+      "render",
+      "cy",
+      "Cypress"
+    ]
+  },
   "scripts": {
     "dev": "next",
+    "test": "NODE_ENV=test next -p 3333",
     "build": "next build",
     "start": "next start",
     "lint": "standard",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "test:unit": "jest",
+    "test:feature": "start-server-and-test test 3333 'cypress open'",
+    "test:feature:ci": "start-server-and-test test 3333 'cypress run'"
   },
   "dependencies": {
     "@apollo/client": "^3.0.2",
@@ -20,15 +34,22 @@
   },
   "devDependencies": {
     "@apollo/react-testing": "^4.0.0",
-    "@babel/core": "^7.11.1",
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
     "@storybook/addon-actions": "^6.0.7",
     "@storybook/addon-essentials": "^6.0.7",
     "@storybook/addon-links": "^6.0.7",
     "@storybook/react": "^6.0.7",
+    "@testing-library/react": "^10.4.9",
+    "babel-jest": "^26.3.0",
     "babel-loader": "^8.1.0",
     "babel-plugin-styled-components": "^1.10.7",
+    "cypress": "^5.0.0",
+    "cypress-dotenv": "^1.2.2",
+    "jest": "^26.4.1",
     "react-is": "^16.13.1",
-    "standard": "^14.3.4"
+    "standard": "^14.3.4",
+    "start-server-and-test": "^1.11.3"
   },
   "license": "ISC"
 }
