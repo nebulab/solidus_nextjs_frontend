@@ -1,5 +1,7 @@
 import { ApolloProvider } from '@apollo/client'
 import { ThemeProvider } from 'styled-components'
+
+import { useApollo } from '../lib/apolloClient'
 import { theme } from '../lib/theme'
 
 export default function App ({ Component, pageProps }) {
