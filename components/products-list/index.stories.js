@@ -1,6 +1,4 @@
 import ProductList from '.'
-import withApollo from '../../utils/withApollo'
-import withTheme from '../../utils/withTheme'
 
 import { products } from './__mocks__/products'
 
@@ -9,7 +7,10 @@ export default {
   component: ProductList
 }
 
-const Template = (args) => withApollo(withTheme(<ProductList {...args} />), products)
+const Template = (args) => <ProductList {...args} />
 
 export const ProductListComponent = Template.bind({})
-ProductListComponent.args = {}
+
+ProductListComponent.args = {
+  mocks: products
+}
