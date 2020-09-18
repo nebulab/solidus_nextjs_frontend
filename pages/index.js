@@ -1,9 +1,10 @@
-import PostList, { GET_PRODUCTS_QUERY } from '../components/ProductsList'
+import { ProductsList } from '../components'
+import { GET_PRODUCTS_QUERY } from '../components/products-list/queries'
 import { initializeApollo } from '../lib/apolloClient'
 
 const IndexPage = () => (
   <main>
-    <PostList />
+    <ProductsList />
   </main>
 )
 
