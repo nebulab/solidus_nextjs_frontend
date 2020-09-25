@@ -36,3 +36,6 @@ yarn-error.log*
 # testing
 /cypress/videos
 /cypress/screenshots
+
+# storybook
+/storybook-static
