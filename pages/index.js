@@ -1,5 +1,5 @@
-import { ProductsList } from '../components'
-import { GET_PRODUCTS_QUERY } from '../components/products-list/queries'
+import { ProductsList } from '../containers'
+import { GET_PRODUCTS_QUERY } from '../containers/products-list/queries'
 import { initializeApollo } from '../lib/apolloClient'
 
 const IndexPage = () => (
