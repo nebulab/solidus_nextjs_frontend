@@ -18,7 +18,7 @@
     "dev": "next",
     "test": "NODE_ENV=test next -p 3333",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p ${PORT-3000}",
     "lint": "standard",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
