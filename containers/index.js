@@ -1,5 +1,6 @@
 import CategoriesNavigation from '../containers/categories-navigation'
-import ProductsList from './products-list'
 import Footer from './footer'
+import Product from './product'
+import ProductsList from './products-list'
 
-export { CategoriesNavigation, ProductsList, Footer }
+export { CategoriesNavigation, ProductsList, Product, Footer }

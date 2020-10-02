@@ -6,6 +6,7 @@ export const GET_PRODUCTS_QUERY = gql`
       nodes {
         id
         name
+        slug
         masterVariant {
           images {
             nodes {
