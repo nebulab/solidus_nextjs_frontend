@@ -1,6 +1,9 @@
 {
   "name": "solidus_nextjs_frontend",
   "version": "0.1.0",
+  "engines": {
+    "node": "12.18.3"
+  },
   "standard": {
     "env": [
       "jest"
