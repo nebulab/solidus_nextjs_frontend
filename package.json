@@ -1,6 +1,9 @@
 {
   "name": "solidus_nextjs_frontend",
   "version": "0.1.0",
+  "engines": {
+    "node": "12.18.3"
+  },
   "standard": {
     "env": [
       "jest"
@@ -15,7 +18,7 @@
     "dev": "next",
     "test": "NODE_ENV=test next -p 3333",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p ${PORT-3000}",
     "lint": "standard",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
@@ -26,7 +29,7 @@
   "dependencies": {
     "@apollo/client": "^3.0.2",
     "graphql": "^15.3.0",
-    "next": "latest",
+    "next": "^9.5.3",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
