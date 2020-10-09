@@ -1,6 +1,6 @@
 import { GET_PRODUCT_QUERY } from '../queries'
 
-export const product = slug => [
+const productWithoutVariants = slug => [
   {
     request: {
       query: GET_PRODUCT_QUERY,
@@ -10,10 +10,18 @@ export const product = slug => [
       data: {
         productBySlug: {
           id: 'U3ByZWU6OlByb2R1Y3QtMQ==',
+          slug,
           name: 'Solidus T-Shirt',
-          slug
+          variants: {
+            nodes: []
+          },
+          masterVariant: {
+            id: 'A3ByZWU6OlByb2R1Y3QtMQ=='
+          }
         }
       }
     }
   }
 ]
+
+export default productWithoutVariants

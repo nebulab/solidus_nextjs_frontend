@@ -1,6 +1,6 @@
 import Product from '.'
 
-import { product } from './__mocks__/product'
+import { productWithVariants, productWithoutVariants } from './__mocks__'
 
 export default {
   title: 'Product',
@@ -9,11 +9,16 @@ export default {
 
 const Template = args => <Product {...args} />
 
-export const ProductComponent = Template.bind({})
-
 const slug = 'solidus-t-shirt'
 
-ProductComponent.args = {
-  mocks: product(slug),
+export const ProductComponentWithVariants = Template.bind({})
+ProductComponentWithVariants.args = {
+  mocks: productWithVariants(slug),
+  slug
+}
+
+export const ProductComponentWithoutVariants = Template.bind({})
+ProductComponentWithoutVariants.args = {
+  mocks: productWithoutVariants(slug),
   slug
 }
