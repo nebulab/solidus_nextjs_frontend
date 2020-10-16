@@ -6,7 +6,10 @@ export default {
   },
   concrete: '#F2F2F2',
   boulder: '#777777',
-  mineShaft: '#222222',
+  mineShaft: {
+    lighter30: '#646464',
+    default: '#222222'
+  },
   gold: '#FDD200',
   shark: '#24282F',
   cinnabar: '#E4361B',

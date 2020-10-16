@@ -29,7 +29,7 @@ export const theme = {
   color: {
     accent: palette.blue.default,
     copy: {
-      default: palette.mineShaft,
+      default: palette.mineShaft.default,
       light: palette.boulder,
       lighter: palette.dustyGray,
       bright: palette.white
@@ -44,13 +44,14 @@ export const theme = {
     },
     border: {
       default: palette.altoDark,
-      dark: palette.mineShaft,
+      dark: palette.mineShaft.default,
       medium: palette.alto,
       light: palette.concrete
     },
     link: {
-      default: palette.mineShaft,
-      hover: palette.blue.default,
+      default: palette.mineShaft.default,
+      hoverBlue: palette.blue.default,
+      hoverGray: palette.mineShaft.lighter30,
       accent: palette.blue.default,
       accentHover: palette.blue.darken10
     }

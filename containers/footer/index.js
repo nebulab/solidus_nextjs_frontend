@@ -3,11 +3,17 @@ import styled from 'styled-components'
 import Link from 'next/link'
 
 const StyledFooter = styled.footer`
-  background-color: ${props => props.theme.color.background.light};
+  background-color: ${props => props.theme.color.background.lighter};
   color: ${props => props.theme.color.copy.light};
+  font-size: ${props => props.theme.font.size.small};
   padding: 8rem 2rem;
-  font-size: 1.3rem;
   margin: 4rem 0 0;
+
+  a {
+    &:hover {
+      color: ${props => props.theme.color.link.hoverGray};
+    }
+  }
 `
 
 const Container = styled.div`
