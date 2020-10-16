@@ -1,6 +1,9 @@
 import { createGlobalStyle } from 'styled-components'
 
+import fonts from './fonts'
+
 const globalStyle = createGlobalStyle`
+
   html {
     box-sizing: border-box;
     font-family: sans-serif;
