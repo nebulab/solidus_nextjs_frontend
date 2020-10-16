@@ -9,18 +9,9 @@ describe('Index page', () => {
   })
 
   it('shows the list of products', () => {
-    const taxonomies = [
-      'All',
-      'Clothing',
-      'Caps',
-      'Bags',
-      'Mugs'
-    ]
+    const taxonomies = ['All', 'Clothing', 'Caps', 'Bags', 'Mugs']
 
-    const products = [
-      'Solidus T-Shirt',
-      'Solidus Long Sleeve'
-    ]
+    const products = ['Solidus T-Shirt', 'Solidus Long Sleeve']
 
     cy.get('main > nav > ul > li').each((item, index) => {
       cy.wrap(item).should('have.text', taxonomies[index])

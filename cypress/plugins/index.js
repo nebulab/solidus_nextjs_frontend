@@ -10,7 +10,8 @@ const dotenvPlugin = require('cypress-dotenv')
 
 module.exports = (on, config) => {
   config = dotenvPlugin(
-    config, {
+    config,
+    {
       path: '.env.test'
     },
     true

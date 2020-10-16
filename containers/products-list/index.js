@@ -17,7 +17,7 @@ const ProductsList = () => {
 
   return (
     <ul>
-      {products.nodes.map((product) => (
+      {products.nodes.map(product => (
         <li key={product.id}>{product.name}</li>
       ))}
     </ul>

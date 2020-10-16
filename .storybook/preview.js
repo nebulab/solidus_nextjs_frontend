@@ -1,12 +1,12 @@
-import { MockedProvider } from '@apollo/react-testing';
-import { ThemeProvider } from 'styled-components';
-import { theme } from '../lib/theme';
+import { MockedProvider } from '@apollo/react-testing'
+import { ThemeProvider } from 'styled-components'
+import { theme } from '../lib/theme'
 
 const withThemeProvider = (Story, context) => (
   <ThemeProvider theme={theme}>
     <Story {...context} />
   </ThemeProvider>
-);
+)
 
 const withApollo = (Story, context) =>
   context.args.mocks ? (
@@ -15,17 +15,17 @@ const withApollo = (Story, context) =>
       addTypename={false}
       defaultOptions={{
         query: { errorPolicy: 'all' },
-        mutate: { errorPolicy: 'all' },
+        mutate: { errorPolicy: 'all' }
       }}
     >
       <Story {...context} />
     </MockedProvider>
   ) : (
     <Story {...context} />
-  );
+  )
 
-export const decorators = [withApollo, withThemeProvider];
+export const decorators = [withApollo, withThemeProvider]
 
 export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
-};
+  actions: { argTypesRegex: '^on[A-Z].*' }
+}

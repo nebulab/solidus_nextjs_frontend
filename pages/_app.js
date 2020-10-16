@@ -9,7 +9,7 @@ import { Footer } from '../containers'
 
 const GlobalStyle = createGlobalStyle`
   a {
-    color: ${(props) => props.theme.colors.copy.light};
+    color: ${props => props.theme.colors.copy.light};
   }
 `
 
