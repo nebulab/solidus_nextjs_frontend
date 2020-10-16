@@ -26,8 +26,6 @@ npm run test:unit
 Solidus NextJS Frontend uses Cypress to run E2E test.
 Cypress is usually run locally using the development server. However, in this case, we use the `start server and run` library to run a dedicated `test` server for Cypress.
 
-
-
 This is needed to disable Apollo's client cache and allows us to stub GraphQL requests.
 stub the GraphQL requests.
 
