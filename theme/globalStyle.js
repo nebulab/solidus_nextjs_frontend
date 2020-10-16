@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
 import fonts from './fonts'
+import typography from './typography'
 
 const globalStyle = createGlobalStyle`
 
@@ -51,9 +52,7 @@ const globalStyle = createGlobalStyle`
     font-family: ${props => props.theme.font.family.monospace};
   }
 
-  a {
-    color: ${props => props.theme.color.copy.light};
-  }
+  ${typography}
 `
 
 export default globalStyle
