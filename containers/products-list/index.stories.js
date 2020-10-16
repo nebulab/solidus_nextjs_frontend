@@ -7,7 +7,7 @@ export default {
   component: ProductList
 }
 
-const Template = (args) => <ProductList {...args} />
+const Template = args => <ProductList {...args} />
 
 export const ProductListComponent = Template.bind({})
 

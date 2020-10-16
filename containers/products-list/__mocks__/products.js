@@ -16,10 +16,12 @@ export const products = [
                 images: {
                   nodes: [
                     {
-                      largeUrl: 'https://res.cloudinary.com/hn8kfpevp/image/upload/v1/spree/products/39/large/solidus_tshirt.jpg'
+                      largeUrl:
+                        'https://res.cloudinary.com/hn8kfpevp/image/upload/v1/spree/products/39/large/solidus_tshirt.jpg'
                     },
                     {
-                      largeUrl: 'https://res.cloudinary.com/hn8kfpevp/image/upload/v1/spree/products/40/large/solidus_tshirt_back.jpg'
+                      largeUrl:
+                        'https://res.cloudinary.com/hn8kfpevp/image/upload/v1/spree/products/40/large/solidus_tshirt_back.jpg'
                     }
                   ]
                 }
@@ -32,10 +34,12 @@ export const products = [
                 images: {
                   nodes: [
                     {
-                      largeUrl: 'https://res.cloudinary.com/hn8kfpevp/image/upload/v1/spree/products/39/large/solidus_tshirt.jpg'
+                      largeUrl:
+                        'https://res.cloudinary.com/hn8kfpevp/image/upload/v1/spree/products/39/large/solidus_tshirt.jpg'
                     },
                     {
-                      largeUrl: 'https://res.cloudinary.com/hn8kfpevp/image/upload/v1/spree/products/40/large/solidus_tshirt_back.jpg'
+                      largeUrl:
+                        'https://res.cloudinary.com/hn8kfpevp/image/upload/v1/spree/products/40/large/solidus_tshirt_back.jpg'
                     }
                   ]
                 }

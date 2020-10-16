@@ -19,7 +19,8 @@
     "test": "NODE_ENV=test next -p 3333",
     "build": "next build",
     "start": "next start -p ${PORT-3000}",
-    "lint": "standard",
+    "lint": "prettier-standard --check",
+    "format": "prettier-standard --format '**/*.{js,css}'",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test:unit": "jest",
@@ -51,8 +52,8 @@
     "cypress": "^5.3.0",
     "cypress-dotenv": "^1.2.2",
     "jest": "^26.4.1",
+    "prettier-standard": "^16.4.1",
     "react-is": "^16.13.1",
-    "standard": "^14.3.4",
     "start-server-and-test": "^1.11.3"
   },
   "license": "ISC"

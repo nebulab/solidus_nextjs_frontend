@@ -5,7 +5,7 @@ export default {
   component: Button
 }
 
-const Template = (args) => <Button {...args}>This is a button</Button>
+const Template = args => <Button {...args}>This is a button</Button>
 
 export const Primary = Template.bind({})
 Primary.args = {}

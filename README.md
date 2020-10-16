@@ -26,8 +26,6 @@ npm run test:unit
 Solidus NextJS Frontend uses Cypress to run E2E test.
 Cypress is usually run locally using the development server. However, in this case, we use the `start server and run` library to run a dedicated `test` server for Cypress.
 
-
-
 This is needed to disable Apollo's client cache and allows us to stub GraphQL requests.
 stub the GraphQL requests.
 
@@ -35,15 +33,29 @@ Use `npm run test:feature` to run E2E tests with the Cypress GUI or simply use `
 
 ### Running the linter
 
-Solidus NextJS Frontent uses StandardJS library as style guide, linter and formatter.
+Solidus NextJS Frontent uses prettier-standard library as style guide, linter and formatter.
 It works as a standlone system and doens't need an `.eslintrc` file.
 
 ```
+  npm run format
   npm run lint
-  npm run lint --fix # Automatically fixes all the offences
 ```
 
-**Important:** install the standardjs extension for you editor [here](https://standardjs.com/#are-there-text-editor-plugins)
+**Important:** install the prettier-standard extension for you editor [here](https://marketplace.visualstudio.com/items?itemName=numso.prettier-standard-vscode)
+
+You can also configure your editor to format the current file on save avoiding the linter errors.
+
+These are the steps to configure the linter on VS Code:
+
+- Create this file: .vscode/settings.json
+- Fill the file with:
+
+```
+{
+  "editor.defaultFormatter": "numso.prettier-standard-vscode",
+  "editor.formatOnSave": true
+}
+```
 
 ### Running Storybook
 

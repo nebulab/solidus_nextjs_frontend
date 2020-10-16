@@ -27,9 +27,7 @@ const CategoriesNavigation = () => {
         {taxonomies.map(({ id, name, permalink }) => (
           <li key={id}>
             <Link href={`/${permalink}`}>
-              <a>
-                {name}
-              </a>
+              <a>{name}</a>
             </Link>
           </li>
         ))}
