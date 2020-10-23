@@ -1,17 +1,13 @@
 import { ApolloProvider } from '@apollo/client'
-import { ThemeProvider, createGlobalStyle } from 'styled-components'
+import { ThemeProvider } from 'styled-components'
 
 import 'normalize.css'
 
 import { useApollo } from '../lib/apolloClient'
-import { theme } from '../lib/theme'
-import { Footer } from '../containers'
+import { theme } from '../theme'
+import GlobalStyle from '../theme/globalStyle'
 
-const GlobalStyle = createGlobalStyle`
-  a {
-    color: ${props => props.theme.colors.copy.light};
-  }
-`
+import { Footer } from '../containers'
 
 export default function App ({ Component, pageProps }) {
   const apolloClient = useApollo(pageProps.initialApolloState)

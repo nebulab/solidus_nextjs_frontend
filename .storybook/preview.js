@@ -1,6 +1,6 @@
 import { MockedProvider } from '@apollo/react-testing'
 import { ThemeProvider } from 'styled-components'
-import { theme } from '../lib/theme'
+import { theme } from '../theme'
 
 const withThemeProvider = (Story, context) => (
   <ThemeProvider theme={theme}>
