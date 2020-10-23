@@ -12,6 +12,7 @@ export const products = [
             {
               id: 'U3ByZWU6OlByb2R1Y3QtMQ==',
               name: 'Solidus T-Shirt',
+              slug: 'solidus-t-shirt',
               masterVariant: {
                 images: {
                   nodes: [
@@ -30,6 +31,7 @@ export const products = [
             {
               id: 'U3ByZWU6OlByb2R1Y3QtMg==',
               name: 'Solidus Long Sleeve',
+              slug: 'solidus-long-sleeve',
               masterVariant: {
                 images: {
                   nodes: [
