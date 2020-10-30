@@ -31,10 +31,10 @@
     "@apollo/client": "^3.0.2",
     "formik": "^2.2.0",
     "graphql": "^15.3.0",
-    "next": "^9.5.3",
+    "next": "^10.0.0",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
-    "react": "^16.13.1",
+    "react": "^17.0.1",
     "react-dom": "^16.13.1",
     "styled-components": "^5.1.1"
   },
