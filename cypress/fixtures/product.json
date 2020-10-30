@@ -3,7 +3,13 @@
     "productBySlug": {
       "id": "U3ByZWU6OlByb2R1Y3QtMQ==",
       "name": "Solidus T-Shirt",
-      "slug": "solidus-t-shirt"
+      "slug": "solidus-t-shirt",
+      "variants": {
+        "nodes": []
+      },
+      "masterVariant": {
+        "id": "A3ByZWU6OlByb2R1Y3QtMQ=="
+      }
     }
   }
 }

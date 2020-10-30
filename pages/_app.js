@@ -6,8 +6,8 @@ import 'normalize.css'
 import { useApollo } from '../lib/apolloClient'
 import { theme } from '../theme'
 import GlobalStyle from '../theme/globalStyle'
-
 import { Footer } from '../containers'
+import { Global } from '../containers'
 
 export default function App ({ Component, pageProps }) {
   const apolloClient = useApollo(pageProps.initialApolloState)
@@ -16,7 +16,9 @@ export default function App ({ Component, pageProps }) {
     <ApolloProvider client={apolloClient}>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Component {...pageProps} />
+        <Global>
+          <Component {...pageProps} />
+        </Global>
         <Footer />
       </ThemeProvider>
     </ApolloProvider>
