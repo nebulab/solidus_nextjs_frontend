@@ -31,7 +31,7 @@ Button.defaultProps = {
   type: 'primary'
 }
 
-Button.propsTypes = {
+Button.propTypes = {
   children: PropTypes.shape({}),
   type: PropTypes.string
 }

@@ -32,6 +32,8 @@
     "jest"
   ],
   "rules": {
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "jest/no-mocks-import": "off",
+    "jest/expect-expect": "off"
   }
 }

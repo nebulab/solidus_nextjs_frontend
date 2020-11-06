@@ -1,5 +1,6 @@
 import { useQuery, useMutation } from '@apollo/client'
 import { Formik, Field, Form } from 'formik'
+import { string } from 'prop-types'
 
 import { GET_PRODUCT_QUERY, ADD_TO_CART } from './queries'
 
@@ -61,6 +62,10 @@ const Product = ({ slug }) => {
       </Formik>
     </div>
   )
+}
+
+Product.propTypes = {
+  slug: string.isRequired
 }
 
 export default Product
