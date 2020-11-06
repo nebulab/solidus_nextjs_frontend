@@ -10,6 +10,11 @@
     "node": true,
     "jest/globals": true
   },
+  "globals": {
+    "cy": "readonly",
+    "Cypress": "readonly",
+    "render": "readonly"
+  },
   "extends": [
     "plugin:react/recommended",
     "plugin:jest/recommended",
