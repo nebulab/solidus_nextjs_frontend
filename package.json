@@ -4,16 +4,6 @@
   "engines": {
     "node": "12.18.3"
   },
-  "standard": {
-    "env": [
-      "jest"
-    ],
-    "globals": [
-      "render",
-      "cy",
-      "Cypress"
-    ]
-  },
   "scripts": {
     "dev": "next",
     "test": "NODE_ENV=test next -p 3333",
@@ -53,7 +43,6 @@
     "cypress": "^5.3.0",
     "cypress-dotenv": "^1.2.2",
     "jest": "^26.4.1",
-    "prettier-standard": "^16.4.1",
     "react-is": "^16.13.1",
     "start-server-and-test": "^1.11.3"
   },
