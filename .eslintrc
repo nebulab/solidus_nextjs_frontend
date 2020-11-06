@@ -1,11 +1,18 @@
 {
+  "settings": {
+    "jest": {
+      "version": 26
+    }
+  },
   "env": {
     "browser": true,
     "es2021": true,
-    "node": true
+    "node": true,
+    "jest/globals": true
   },
   "extends": [
     "plugin:react/recommended",
+    "plugin:jest/recommended",
     "standard"
   ],
   "parserOptions": {
@@ -16,7 +23,8 @@
     "sourceType": "module"
   },
   "plugins": [
-    "react"
+    "react",
+    "jest"
   ],
   "rules": {
     "react/react-in-jsx-scope": "off"
