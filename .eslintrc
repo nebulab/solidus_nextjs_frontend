@@ -16,9 +16,10 @@
     "render": "readonly"
   },
   "extends": [
+    "standard",
     "plugin:react/recommended",
     "plugin:jest/recommended",
-    "standard"
+    "plugin:prettier/recommended"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -29,9 +30,11 @@
   },
   "plugins": [
     "react",
-    "jest"
+    "jest",
+    "prettier"
   ],
   "rules": {
+    "prettier/prettier": "error",
     "react/react-in-jsx-scope": "off",
     "jest/no-mocks-import": "off",
     "jest/expect-expect": "off"

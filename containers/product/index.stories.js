@@ -7,7 +7,7 @@ export default {
   component: Product
 }
 
-const Template = args => <Product {...args} />
+const Template = (args) => <Product {...args} />
 
 const slug = 'solidus-t-shirt'
 
