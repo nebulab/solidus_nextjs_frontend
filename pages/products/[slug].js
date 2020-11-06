@@ -9,7 +9,7 @@ const ProductPage = ({ slug }) => (
   </main>
 )
 
-export async function getServerSideProps ({ params }) {
+export async function getServerSideProps({ params }) {
   const apolloClient = initializeApollo()
 
   await apolloClient.query({

@@ -26,7 +26,7 @@ const Product = ({ slug }) => {
       ? productBySlug.variants.nodes[0].id
       : productBySlug.masterVariant.id
 
-  const onSubmit = values => {
+  const onSubmit = (values) => {
     addToCart({
       variables: {
         variantId: values.variantId,
@@ -46,18 +46,18 @@ const Product = ({ slug }) => {
         onSubmit={onSubmit}
       >
         <Form>
-          {productBySlug.variants.nodes.map(variant => (
+          {productBySlug.variants.nodes.map((variant) => (
             <div key={variant.id}>
               <label>
-                <Field type='radio' name='variantId' value={variant.id} />
+                <Field type="radio" name="variantId" value={variant.id} />
                 {variant.sku}
               </label>
             </div>
           ))}
 
-          <Field id='quantity' name='quantity' type='number' />
+          <Field id="quantity" name="quantity" type="number" />
 
-          <button type='submit'>Add to Cart</button>
+          <button type="submit">Add to Cart</button>
         </Form>
       </Formik>
     </div>

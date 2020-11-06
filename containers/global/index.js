@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 
 import { CREATE_ORDER } from './queries'
 
-const Global = props => {
+const Global = (props) => {
   const [createOrder] = useMutation(CREATE_ORDER)
 
   useEffect(() => {

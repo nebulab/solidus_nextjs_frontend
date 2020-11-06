@@ -10,7 +10,7 @@ const IndexPage = () => (
   </main>
 )
 
-export async function getStaticProps () {
+export async function getStaticProps() {
   const apolloClient = initializeApollo()
 
   await apolloClient.query({

@@ -20,7 +20,7 @@ const CategoriesNavigation = () => {
     <nav>
       <ul>
         <li>
-          <Link href='/products'>
+          <Link href="/products">
             <a>All</a>
           </Link>
         </li>

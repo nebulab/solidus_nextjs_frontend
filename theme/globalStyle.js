@@ -16,11 +16,11 @@ const globalStyle = createGlobalStyle`
   }
 
   body {
-    color: ${props => props.theme.color.copy.default};
-    font-family: ${props => props.theme.font.family.base};
-    font-size: ${props => props.theme.font.size.base};
-    font-weight: ${props => props.theme.font.weight.base};
-    line-height: ${props => props.theme.font.lineHeight.base};
+    color: ${(props) => props.theme.color.copy.default};
+    font-family: ${(props) => props.theme.font.family.base};
+    font-size: ${(props) => props.theme.font.size.base};
+    font-weight: ${(props) => props.theme.font.weight.base};
+    line-height: ${(props) => props.theme.font.lineHeight.base};
     text-align: left;
     text-rendering: optimizeLegibility;
   }
@@ -38,17 +38,17 @@ const globalStyle = createGlobalStyle`
   }
 
   label {
-    font-weight: ${props => props.theme.font.weight.bold};
+    font-weight: ${(props) => props.theme.font.weight.bold};
     margin-bottom: 1rem;
   }
 
   legend {
-    font-weight: ${props => props.theme.font.weight.bold};
+    font-weight: ${(props) => props.theme.font.weight.bold};
   }
 
   code,
   pre {
-    font-family: ${props => props.theme.font.family.monospace};
+    font-family: ${(props) => props.theme.font.family.monospace};
   }
 
   ${typography}

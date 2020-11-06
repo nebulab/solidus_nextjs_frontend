@@ -2,19 +2,19 @@ import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 
 const StyledButton = styled.button`
-  color: ${props => props.theme.color.copy.bright};
+  color: ${(props) => props.theme.color.copy.bright};
   border-radius: 2px;
   padding: 0 30px;
   height: 40px;
   outline: none;
   cursor: pointer;
-  ${props =>
+  ${(props) =>
     props.type === 'primary' &&
     css`
       background-color: ${props.theme.color.accent};
       border: 0;
     `}
-  ${props =>
+  ${(props) =>
     props.type === 'secondary' &&
     css`
       background-color: ${props.theme.color.copy.bright};
