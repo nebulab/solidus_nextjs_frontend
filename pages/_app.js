@@ -6,10 +6,10 @@ import 'normalize.css'
 import { useApollo } from '../lib/apolloClient'
 import { theme } from '../theme'
 import GlobalStyle from '../theme/globalStyle'
-import { Footer } from '../containers'
-import { Global } from '../containers'
+import { Global, Footer } from '../containers'
+import { shape } from 'prop-types'
 
-export default function App ({ Component, pageProps }) {
+const App = ({ Component, pageProps }) => {
   const apolloClient = useApollo(pageProps.initialApolloState)
 
   return (
@@ -24,3 +24,10 @@ export default function App ({ Component, pageProps }) {
     </ApolloProvider>
   )
 }
+
+App.propTypes = {
+  Component: shape({}),
+  pageProps: shape({})
+}
+
+export default App

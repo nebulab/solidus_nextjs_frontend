@@ -18,7 +18,7 @@ const ProductsList = () => {
 
   return (
     <ul>
-      {products.nodes.map(product => (
+      {products.nodes.map((product) => (
         <li key={product.id}>
           <Link href={`/products/${encodeURIComponent(product.slug)}`}>
             <a>{product.name}</a>

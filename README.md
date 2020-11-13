@@ -33,26 +33,28 @@ Use `npm run test:feature` to run E2E tests with the Cypress GUI or simply use `
 
 ### Running the linter
 
-Solidus NextJS Frontent uses prettier-standard library as style guide, linter and formatter.
-It works as a standlone system and doens't need an `.eslintrc` file.
+Solidus NextJS Frontend uses ESLint with the JavaScript Standard style guide and Prettier as formatter.
 
-```
-  npm run format
-  npm run lint
-```
+Use `npm run lint` to run the eslint linter
 
-**Important:** install the prettier-standard extension for you editor [here](https://marketplace.visualstudio.com/items?itemName=numso.prettier-standard-vscode)
+Use `npm run lint:fix` to run the eslint linter with the autofix option
 
-You can also configure your editor to format the current file on save avoiding the linter errors.
+Use `npm run lint:format` to run the prettier formatter on all files.
 
+**Important:**
+
+- Install the prettier extension for your editor [here](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- Install the eslint extension for your editor [here](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+
+You can also configure your editor to format the current file on save avoiding a lot of errors.
 These are the steps to configure the linter on VS Code:
 
-- Create this file: .vscode/settings.json
+- Create this file: `.vscode/settings.json`
 - Fill the file with:
 
 ```
 {
-  "editor.defaultFormatter": "numso.prettier-standard-vscode",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true
 }
 ```

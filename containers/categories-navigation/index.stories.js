@@ -7,7 +7,7 @@ export default {
   component: CategoriesNavigation
 }
 
-const Template = args => <CategoriesNavigation {...args} />
+const Template = (args) => <CategoriesNavigation {...args} />
 
 export const CategoriesNavigationComponent = Template.bind({})
 

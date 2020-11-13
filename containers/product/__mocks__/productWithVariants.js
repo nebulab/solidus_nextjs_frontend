@@ -1,6 +1,6 @@
 import { GET_PRODUCT_QUERY } from '../queries'
 
-const productWithVariants = slug => [
+const productWithVariants = (slug) => [
   {
     request: {
       query: GET_PRODUCT_QUERY,

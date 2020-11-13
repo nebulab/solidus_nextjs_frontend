@@ -1,3 +1,4 @@
+import { string } from 'prop-types'
 import { Product } from '../../containers'
 import { GET_PRODUCT_QUERY } from '../../containers/product/queries'
 import { initializeApollo } from '../../lib/apolloClient'
@@ -8,7 +9,7 @@ const ProductPage = ({ slug }) => (
   </main>
 )
 
-export async function getServerSideProps ({ params }) {
+export async function getServerSideProps({ params }) {
   const apolloClient = initializeApollo()
 
   await apolloClient.query({
@@ -22,6 +23,10 @@ export async function getServerSideProps ({ params }) {
       slug: params.slug
     }
   }
+}
+
+ProductPage.propTypes = {
+  slug: string.isRequired
 }
 
 export default ProductPage
