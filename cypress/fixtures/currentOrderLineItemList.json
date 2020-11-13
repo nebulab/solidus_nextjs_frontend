@@ -1,0 +1,26 @@
+{
+  "data": {
+    "currentOrder": {
+      "id": "U3ByZWU6Ok9yZGVyLTk2",
+      "number": "R520429551",
+      "lineItems": {
+        "nodes": [
+          {
+            "id": "U3ByZWU6OkxpbmVJdGVtLTcw",
+            "variant": {
+              "sku": "SOL-00003"
+            },
+            "quantity": 1
+          },
+          {
+            "id": "U3ByZWU6OkxpbmVJdGVtLTcx",
+            "variant": {
+              "sku": "SOL-00004"
+            },
+            "quantity": 2
+          }
+        ]
+      }
+    }
+  }
+}

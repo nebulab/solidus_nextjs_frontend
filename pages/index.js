@@ -2,9 +2,13 @@ import { CategoriesNavigation, ProductsList } from '../containers'
 import { GET_TAXONOMIES_QUERY } from '../containers/categories-navigation/queries'
 import { GET_PRODUCTS_QUERY } from '../containers/products-list/queries'
 import { initializeApollo } from '../lib/apolloClient'
+import Link from 'next/link'
 
 const IndexPage = () => (
   <main>
+    <Link href="/cart">
+      <a>Cart</a>
+    </Link>
     <CategoriesNavigation />
     <ProductsList />
   </main>
