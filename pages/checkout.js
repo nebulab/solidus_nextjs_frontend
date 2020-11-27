@@ -1,6 +1,8 @@
 import { gql, useQuery } from '@apollo/client'
 import { useRouter } from 'next/router'
 
+import AddressStep from '../containers/checkout/address-step'
+
 const GET_ORDER_QUERY = gql`
   query GetCurrentOrder {
     currentOrder {
@@ -19,7 +21,7 @@ const GET_ORDER_QUERY = gql`
   }
 `
 
-const CheckoutPage = () => {
+function CheckoutPage() {
   const router = useRouter()
   const { loading, error, data } = useQuery(GET_ORDER_QUERY)
 
@@ -48,6 +50,7 @@ const CheckoutPage = () => {
           </li>
         ))}
       </ul>
+      <AddressStep />
     </main>
   )
 }
