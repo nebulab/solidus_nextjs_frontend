@@ -8,10 +8,21 @@ describe('Cart page', () => {
   })
 
   it('shows the list of current order line items', () => {
-    const lineItemsData = ['SOL-00003 - Quantity: 1', 'SOL-00004 - Quantity: 2']
+    const lineItemsData = {
+      0: {
+        id: 'U3ByZWU6OkxpbmVJdGVtLTcw',
+        sku: 'SOL-00003',
+        quantity: 1
+      },
+      1: {
+        id: 'U3ByZWU6OkxpbmVJdGVtLTcx',
+        sku: 'SOL-00004',
+        quantity: 2
+      }
+    }
 
-    cy.get('main > ul > li').each((item, index) => {
-      cy.wrap(item).should('have.text', lineItemsData[index])
+    cy.get('main > ul > li > .sku').each((item, index) => {
+      cy.wrap(item).should('have.text', `SKU: ${lineItemsData[index].sku}`)
     })
   })
 })

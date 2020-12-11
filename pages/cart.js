@@ -1,4 +1,4 @@
-import { gql, useQuery } from '@apollo/client'
+import { gql, useQuery, useMutation } from '@apollo/client'
 
 const CartPage = () => {
   const GET_CART_LINE_ITEMS_QUERY = gql`
@@ -19,7 +19,31 @@ const CartPage = () => {
     }
   `
 
+  const REMOVE_FROM_CART_MUTATION = gql`
+    mutation removeFromCart($lineItemId: ID!) {
+      removeFromCart(input: { lineItemId: $lineItemId }) {
+        order {
+          number
+          state
+          lineItems {
+            nodes {
+              id
+            }
+          }
+        }
+        errors {
+          path
+          message
+        }
+      }
+    }
+  `
+
   const { loading, error, data } = useQuery(GET_CART_LINE_ITEMS_QUERY)
+
+  const [removeFromCart] = useMutation(REMOVE_FROM_CART_MUTATION, {
+    refetchQueries: [{ query: GET_CART_LINE_ITEMS_QUERY }]
+  })
 
   if (error) {
     return <div>Error loading menu.</div>
@@ -33,11 +57,23 @@ const CartPage = () => {
 
   const hasLineItems = () => lineItems.nodes.length > 0
   const emptyCart = () => <div>Your cart is empty</div>
+
+  const removeLineItem = (lineItemId) => {
+    removeFromCart({ variables: { lineItemId: lineItemId } })
+  }
+
   const lineItemsList = () => (
     <ul>
       {lineItems.nodes.map((lineItem) => (
         <li key={lineItem.id}>
-          {lineItem.variant.sku} - Quantity: {lineItem.quantity}
+          <div className="sku">
+            <label>SKU: </label>
+            <span>{lineItem.variant.sku}</span>
+          </div>
+          <div className="remove">
+            <label>Remove: </label>
+            <button onClick={() => removeLineItem(lineItem.id)}>X</button>
+          </div>
         </li>
       ))}
     </ul>
