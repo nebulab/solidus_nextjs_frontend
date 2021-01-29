@@ -6,7 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <button
-        class="button__StyledButton-sc-19djgr1-0 esiBmb"
+        class="button__StyledButton-sc-19djgr1-0 dZkhXt"
         type="primary"
       >
         Click Me!
@@ -15,7 +15,7 @@ Object {
   </body>,
   "container": <div>
     <button
-      class="button__StyledButton-sc-19djgr1-0 esiBmb"
+      class="button__StyledButton-sc-19djgr1-0 dZkhXt"
       type="primary"
     >
       Click Me!
@@ -81,7 +81,7 @@ Object {
   "baseElement": <body>
     <div>
       <button
-        class="button__StyledButton-sc-19djgr1-0 spRMM"
+        class="button__StyledButton-sc-19djgr1-0 igQySO"
         type="secondary"
       >
         Click Me!
@@ -90,7 +90,7 @@ Object {
   </body>,
   "container": <div>
     <button
-      class="button__StyledButton-sc-19djgr1-0 spRMM"
+      class="button__StyledButton-sc-19djgr1-0 igQySO"
       type="secondary"
     >
       Click Me!
