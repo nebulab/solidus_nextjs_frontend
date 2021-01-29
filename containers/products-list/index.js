@@ -1,10 +1,7 @@
-import { useQuery } from '@apollo/client'
 import Link from 'next/link'
 
-import { GET_PRODUCTS_QUERY } from './queries'
-
 const ProductsList = () => {
-  const { loading, error, data } = useQuery(GET_PRODUCTS_QUERY)
+  const { loading, error = true, data } = {}
 
   if (error) {
     return <div>Error loading posts.</div>

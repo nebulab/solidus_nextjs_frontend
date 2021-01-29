@@ -26,9 +26,6 @@ npm run test:unit
 Solidus NextJS Frontend uses Cypress to run E2E test.
 Cypress is usually run locally using the development server. However, in this case, we use the `start server and run` library to run a dedicated `test` server for Cypress.
 
-This is needed to disable Apollo's client cache and allows us to stub GraphQL requests.
-stub the GraphQL requests.
-
 Use `npm run test:feature` to run E2E tests with the Cypress GUI or simply use `npm run test:feature:ci` to run them headless.
 
 ### Running the linter
@@ -64,7 +61,6 @@ These are the steps to configure the linter on VS Code:
 - Each component must be added under the `components` directory
 - Create the directory with the name of the component (e.g. button)
 - The `index.js` file contains the component
-- The `__mock__` directory contains the Apollo queries and mutations mock used in tests
 - The `queries.js` file export all the components `queries`
 - The `mutations.js` file export all the components `mutations`
 - Follow the style of the `Button` component and the `ProductsList` one
