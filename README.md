@@ -21,13 +21,6 @@ You can run unit tests locally using:
 npm run test:unit
 ```
 
-### Running the E2E test
-
-Solidus NextJS Frontend uses Cypress to run E2E test.
-Cypress is usually run locally using the development server. However, in this case, we use the `start server and run` library to run a dedicated `test` server for Cypress.
-
-Use `npm run test:feature` to run E2E tests with the Cypress GUI or simply use `npm run test:feature:ci` to run them headless.
-
 ### Running the linter
 
 Solidus NextJS Frontend uses ESLint with the JavaScript Standard style guide and Prettier as formatter.

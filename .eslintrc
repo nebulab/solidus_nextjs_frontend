@@ -11,8 +11,6 @@
     "jest/globals": true
   },
   "globals": {
-    "cy": "readonly",
-    "Cypress": "readonly",
     "render": "readonly"
   },
   "extends": [
