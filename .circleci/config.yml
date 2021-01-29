@@ -7,9 +7,6 @@ workflows:
       - jest-tests:
           requires:
             - deps
-      - cypress-tests:
-          requires:
-            - deps
       - standardjs-lint:
           requires:
             - deps
@@ -44,18 +41,6 @@ jobs:
       - run:
           name: Run unit tests
           command: npm run test:unit
-
-  cypress-tests:
-    docker:
-      - image: cypress/base:12
-    steps:
-      - restore_cache:
-          key: git-cache-{{ .Revision }}
-      - restore_cache:
-          key: node-cache-{{ checksum "package-lock.json" }}
-      - run:
-          name: Run feature tests
-          command: npm run test:feature:ci
 
   standardjs-lint:
     docker:

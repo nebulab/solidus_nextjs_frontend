@@ -33,9 +33,5 @@ yarn-error.log*
 # vercel
 .vercel
 
-# testing
-/cypress/videos
-/cypress/screenshots
-
 # VSCode
 .vscode/

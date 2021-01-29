@@ -1,14 +1,9 @@
-import { useQuery, useMutation } from '@apollo/client'
 import { Formik, Field, Form } from 'formik'
 import { string } from 'prop-types'
 
-import { GET_PRODUCT_QUERY, ADD_TO_CART } from './queries'
-
 const Product = ({ slug }) => {
-  const [addToCart] = useMutation(ADD_TO_CART)
-  const { loading, error, data } = useQuery(GET_PRODUCT_QUERY, {
-    variables: { slug }
-  })
+  const [addToCart] = []
+  const { loading, error = true, data } = {}
 
   if (error) {
     return <div>Error loading product.</div>

@@ -1,10 +1,7 @@
-import { useQuery } from '@apollo/client'
 import Link from 'next/link'
 
-import { GET_TAXONOMIES_QUERY } from './queries'
-
 const CategoriesNavigation = () => {
-  const { loading, error, data } = useQuery(GET_TAXONOMIES_QUERY)
+  const { loading, error = true } = {}
 
   if (error) {
     return <div>Error loading menu.</div>
@@ -14,7 +11,7 @@ const CategoriesNavigation = () => {
     return <div>Loading</div>
   }
 
-  const taxonomies = data.taxonomies.nodes[0].rootTaxon.children.nodes
+  const taxonomies = []
 
   return (
     <nav>
