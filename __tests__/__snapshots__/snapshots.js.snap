@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders homepage unchanged 1`] = `
+<main>
+  <a
+    href="/cart"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+  >
+    Cart
+  </a>
+  <div>
+    Error loading menu.
+  </div>
+  <div>
+    Error loading posts.
+  </div>
+</main>
+`;

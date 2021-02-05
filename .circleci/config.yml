@@ -40,7 +40,7 @@ jobs:
           key: node-cache-{{ checksum "package-lock.json" }}
       - run:
           name: Run unit tests
-          command: npm run test:unit
+          command: npm run test:ci
 
   standardjs-lint:
     docker:
