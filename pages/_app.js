@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { ThemeProvider } from 'styled-components'
 
 import 'normalize.css'
@@ -5,7 +6,6 @@ import 'normalize.css'
 import { theme } from 'theme'
 import GlobalStyle from 'theme/globalStyle'
 import { Global, Footer } from 'containers'
-import { shape } from 'prop-types'
 
 const App = ({ Component, pageProps }) => {
   return (
@@ -20,8 +20,8 @@ const App = ({ Component, pageProps }) => {
 }
 
 App.propTypes = {
-  Component: shape({}),
-  pageProps: shape({})
+  Component: PropTypes.elementType.isRequired,
+  pageProps: PropTypes.object
 }
 
 export default App
