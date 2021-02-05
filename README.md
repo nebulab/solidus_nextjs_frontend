@@ -18,7 +18,7 @@ of React testing library to render the components.
 You can run unit tests locally using:
 
 ```
-npm run test:unit
+npm run test:ci
 ```
 
 ### Running the linter

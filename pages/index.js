@@ -1,4 +1,4 @@
-import { CategoriesNavigation, ProductsList } from '../containers'
+import { CategoriesNavigation, ProductsList } from 'containers'
 import Link from 'next/link'
 
 const IndexPage = () => (
