@@ -1,8 +1,9 @@
-import Link from 'next/link'
-
 const Footer = () => (
   <p>
-    Powered by <Link href="http://solidus.io/">Solidus</Link>
+    Powered by{' '}
+    <a href="http://solidus.io/" target="_blank" rel="noreferrer">
+      Solidus
+    </a>
   </p>
 )
 
