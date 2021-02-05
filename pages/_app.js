@@ -1,23 +1,6 @@
 import PropTypes from 'prop-types'
-import { ThemeProvider } from 'styled-components'
 
-import 'normalize.css'
-
-import { theme } from 'theme'
-import GlobalStyle from 'theme/globalStyle'
-import { Global, Footer } from 'containers'
-
-const App = ({ Component, pageProps }) => {
-  return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Global>
-        <Component {...pageProps} />
-      </Global>
-      <Footer />
-    </ThemeProvider>
-  )
-}
+const App = ({ Component, pageProps }) => <Component {...pageProps} />
 
 App.propTypes = {
   Component: PropTypes.elementType.isRequired,
