@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-import api from 'api'
+import api, { addToCart } from 'api'
 
 const ProductPage = ({ product }) => {
   const { description, display_price, name } = product
@@ -10,6 +10,23 @@ const ProductPage = ({ product }) => {
       <h1>{name}</h1>
       <p>{description}</p>
       <p>{display_price}</p>
+      {product.variants.length > 0 ? (
+        <ul>
+          {product.variants.map((variant) => (
+            <li key={variant.id}>
+              {variant.name} ({variant.display_price})
+              <button onClick={() => addToCart(variant.id)}>Add to cart</button>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>
+          {product.master.name} ({product.master.display_price})
+          <button onClick={() => addToCart(product.master.id)}>
+            Add to cart
+          </button>
+        </p>
+      )}
     </article>
   )
 }

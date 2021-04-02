@@ -1,70 +1,49 @@
+import { useEffect, useState } from 'react'
+
+import { getOrder, removeFromCart } from 'api'
+
 const CartPage = () => {
-  const { loading, error = true, data } = {}
-  const [removeFromCart] = []
-  const [updateCartQuantity] = []
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState('')
+  const [cart, setCart] = useState(null)
+
+  useEffect(() => {
+    getOrder()
+      .then((order) => {
+        setCart(order)
+        setLoading(false)
+      })
+      .catch(() => {
+        setError('The cart is empty.')
+        setLoading(false)
+      })
+  }, [])
 
   if (error) {
-    return <div>Error loading menu.</div>
+    return <div>{error}</div>
   }
 
   if (loading) {
     return <div>Loading</div>
   }
 
-  const { lineItems } = data.currentOrder
-
-  const hasLineItems = () => lineItems.nodes.length > 0
-  const emptyCart = () => <div>Your cart is empty</div>
-
-  const removeLineItem = (lineItemId) => {
-    removeFromCart({ variables: { lineItemId: lineItemId } })
-  }
-
-  const updateLineItemQuantity = (lineItemId, quantity) => {
-    updateCartQuantity({
-      variables: { lineItemId: lineItemId, quantity: quantity }
-    })
-  }
-
-  const lineItemsList = () => (
-    <ul>
-      {lineItems.nodes.map((lineItem) => (
-        <li key={lineItem.id}>
-          <div className="sku">
-            <label>SKU: </label>
-            <span>{lineItem.variant.sku}</span>
-          </div>
-          <div className="quantity">
-            <label>Quantity: </label>
-            <button
-              onClick={() =>
-                updateLineItemQuantity(lineItem.id, lineItem.quantity - 1)
-              }
-            >
-              -
-            </button>
-            <span>{lineItem.quantity}</span>
-            <button
-              onClick={() =>
-                updateLineItemQuantity(lineItem.id, lineItem.quantity + 1)
-              }
-            >
-              +
-            </button>
-          </div>
-          <div className="remove">
-            <label>Remove: </label>
-            <button onClick={() => removeLineItem(lineItem.id)}>X</button>
-          </div>
-        </li>
-      ))}
-    </ul>
-  )
-
   return (
     <main>
       <p>Shopping Cart</p>
-      {hasLineItems() ? lineItemsList() : emptyCart()}
+      {cart.line_items.length > 0 ? (
+        <ul>
+          {cart.line_items.map((lineItem) => (
+            <li key={lineItem.id}>
+              <p>SKU: {lineItem.variant.sku}</p>
+              <button onClick={() => removeFromCart(lineItem.id)}>
+                Remove
+              </button>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <div>Your cart is empty</div>
+      )}
     </main>
   )
 }
