@@ -26,15 +26,12 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "jest",
-    "prettier"
-  ],
+  "plugins": ["react", "jest", "prettier"],
   "rules": {
     "prettier/prettier": "error",
     "react/react-in-jsx-scope": "off",
     "jest/no-mocks-import": "off",
-    "jest/expect-expect": "off"
+    "jest/expect-expect": "off",
+    "camelcase": "off"
   }
 }

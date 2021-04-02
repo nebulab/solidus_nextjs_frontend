@@ -5,9 +5,9 @@
     "node": "12.18.3"
   },
   "scripts": {
-    "dev": "next",
+    "dev": "next -p 4000",
     "build": "next build",
-    "start": "next start -p ${PORT-3000}",
+    "start": "next start -p 4000",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "lint:format": "prettier --write './**/*.{js,md,json}'",
@@ -16,11 +16,13 @@
   },
   "dependencies": {
     "formik": "^2.2.6",
+    "js-cookie": "^2.2.1",
     "next": "^10.0.5",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "solidus-sdk": "^1.0.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.9",
